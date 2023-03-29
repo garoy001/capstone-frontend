@@ -1,6 +1,5 @@
-// const URL = 'https://cetamdapi.onrender.com/gigs/';
-const URL = 'http://localhost:8888/inv';
-const URL2 = 'http://localhost:8888/cart';
+const URL = 'https://capstonebackend-eylv.onrender.com/inv';
+const URL2 = 'https://capstonebackend-eylv.onrender.com/cart';
 
 export const inventoryLoader = async () => {
 	// const authToken = document.cookie.split('token=')[1]

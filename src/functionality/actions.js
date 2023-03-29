@@ -1,5 +1,5 @@
 import { redirect } from 'react-router-dom';
-const url = 'https://project-api-9ejh.onrender.com';
+const url = 'https://capstonebackend-eylv.onrender.com';
 
 export const createAction = async ({ request }) => {
 	const formData = await request.formData();
@@ -28,14 +28,14 @@ export const updateAction = async ({ request, params }) => {
 		price: formData.get('price'),
 		amount: formData.get('amount'),
 		image: formData.get('image'),
-    };
-    const bodyObj = {
-        cart: updatedCart,
-        operation: params.op
-    }
+	};
+	const bodyObj = {
+		cart: updatedCart,
+		operation: params.op,
+	};
 	console.log('update action >>>> id= ' + id);
 	console.table(updatedCart);
-	await fetch(url + '/cart/' + id , {
+	await fetch(url + '/cart/' + id, {
 		method: 'put',
 		headers: {
 			'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const updateAction = async ({ request, params }) => {
 };
 export const deleteAction = async ({ params }) => {
 	const id = params.id;
-	await fetch(url + '/cart/' + id , {
+	await fetch(url + '/cart/' + id, {
 		method: 'delete',
 	});
 	return redirect('/inv');
