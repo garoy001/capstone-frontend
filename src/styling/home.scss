@@ -54,6 +54,9 @@
 		left: 5%;
 		background-color: #e5e5e5;
 	}
+	.react-reveal {
+		animation-duration: 3s !important;
+	}
 
 	/*
        * Extra utilities
@@ -126,6 +129,8 @@
 			border-radius: 21px 21px 0 0;
 			background-repeat: no-repeat;
 			background-position: center;
+			background-size: 400px;
+			// background-position: 50% 30%;
 		}
 		// &:hover {
 		// 	.boxText {

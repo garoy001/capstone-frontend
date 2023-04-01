@@ -38,7 +38,12 @@ export const CartItem = (props) => {
 			</p>
 			<div className="updater" style={{ display: updateData }}>
 				<Form action={`/update/${props.id}`} method="post">
-					<input type="text" name="itemName" placeholder={props.name} />
+					<input
+						type="text"
+						name="itemName"
+						placeholder={props.name}
+						value={props.name}
+					/>
 					<input type="text" name="itemPrice" placeholder={props.cost} />
 					<input type="submit" value={`✅`} />
 				</Form>

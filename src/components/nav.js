@@ -42,11 +42,7 @@ export const Nav = () => {
 								Home
 							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#featured-products">
-								Featured
-							</a>
-						</li>
+
 						<li class="nav-item">
 							<a class="nav-link" href="#products">
 								Products
@@ -81,7 +77,9 @@ export const Nav = () => {
 								onMouseEnter={handleEnter}
 								onMouseLeave={handleExit}
 								style={{ opacity: opa }}
-							></div>
+							>
+								{cartData.length}
+							</div>
 						</a>
 						<Cart />
 					</div>

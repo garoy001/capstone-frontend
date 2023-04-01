@@ -58,7 +58,7 @@ export const updateAction = async ({ request, params }) => {
 		},
 		body: JSON.stringify(updatedCart),
 	});
-	// window.location.reload(false);
+	window.location.reload(false);
 	return redirect('/');
 };
 export const deleteAction = async ({ params }) => {
