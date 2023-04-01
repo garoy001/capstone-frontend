@@ -2,9 +2,12 @@
 
 ---
 
-FrontEnd:
-Live Link: ![click here]()
-BackEnd:
+FrontEnd: 
+
+Live Link: ![click here](https://capstoneshopp.netlify.app/) 
+
+BackEnd: 
+
 Live Link: ![https://capstonebackend-eylv.onrender.com](https://capstonebackend-eylv.onrender.com)
 
 ## E-Commerce Crud App
