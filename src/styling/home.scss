@@ -119,4 +119,27 @@
 		white-space: nowrap;
 		-webkit-overflow-scrolling: touch;
 	}
+	.boxHover {
+		.boxShow {
+			width: 80%;
+			height: 300px;
+			border-radius: 21px 21px 0 0;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		// &:hover {
+		// 	.boxText {
+		// 		display: none;
+		// 		transition: display 1s;
+		// 	}
+		// 	.boxShow {
+		// 		height: 80% !important;
+		// 		background-size: contain !important;
+		// 		cursor: pointer;
+		// 	}
+		// 	button {
+		// 		z-index: 10;
+		// 	}
+		// }
+	}
 }

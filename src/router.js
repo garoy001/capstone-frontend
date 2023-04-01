@@ -6,11 +6,11 @@ import {
 import App from './App';
 import { Home } from './pages/home';
 import { Checkout } from './pages/checkout';
-// import {
-// 	inventoryLoader,
-// 	itemLoader,
-// 	cartLoader,
-// } from './functionality/loaders';
+import {
+	inventoryLoader,
+	itemLoader,
+	cartLoader,
+} from './functionality/loaders';
 import {
 	createAction,
 	updateAction,
@@ -18,7 +18,7 @@ import {
 } from './functionality/actions';
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route path="/" element={<App />}>
+		<Route path="/" element={<App />} loader={inventoryLoader}>
 			<Route path="" element={<Home />} />
 			<Route path="checkout" element={<Checkout />} />
 			<Route path="create" action={createAction} />

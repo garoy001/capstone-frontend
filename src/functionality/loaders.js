@@ -2,10 +2,9 @@ const URL = 'https://capstonebackend-eylv.onrender.com/inv';
 const URL2 = 'https://capstonebackend-eylv.onrender.com/cart';
 
 export const inventoryLoader = async () => {
-	// const authToken = document.cookie.split('token=')[1]
-	// console.log(authToken)
 	const response = await fetch(URL);
 	const inventory = await response.json();
+	console.log(inventory);
 	return inventory;
 };
 

@@ -1,12 +1,16 @@
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Cart } from './cart';
-import { createContext, useState } from 'react';
-export const CartContext = createContext({
-	cartData: {},
-	setCartData: () => {},
-});
+import { useState, useContext } from 'react';
+import { CartContext } from '../App';
 export const Nav = () => {
-	const [cartData, setCartData] = useState(0);
+	const [opa, setOpa] = useState(1);
+	const handleEnter = (e) => {
+		setOpa(0.6);
+	};
+	const handleExit = (e) => {
+		setOpa(1);
+	};
+	const { cartData, setCartData } = useContext(CartContext);
 	return (
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
 			<div class="container justify-content-center">
@@ -49,22 +53,28 @@ export const Nav = () => {
 					</ul>
 				</div>
 				<div>
-					<CartContext.Provider value={{ cartData, setCartData }}>
-						<div class="nav-item dropdown align-items-center justify-content-center">
-							<a
-								class="nav-link dropdown-toggle cart-container py-0 "
-								href="#"
-								data-toggle="dropdown"
-								aria-expanded="false"
-							>
-								<AiOutlineShoppingCart
-									style={{ color: 'white', fontSize: '2rem' }}
-								/>
-								<div className="cartNumDisplay">{cartData}</div>
-							</a>
-							<Cart />
-						</div>
-					</CartContext.Provider>
+					<div class="nav-item dropdown align-items-center justify-content-center">
+						<a
+							class="nav-link dropdown-toggle cart-container py-0 "
+							href="#"
+							data-toggle="dropdown"
+							aria-expanded="false"
+						>
+							<AiOutlineShoppingCart
+								style={{ color: 'white', fontSize: '2rem', opacity: opa }}
+								className="cart-cart-ico hoverIco"
+								onMouseEnter={handleEnter}
+								onMouseLeave={handleExit}
+							/>
+							<div
+								className="cartNumDisplay hoverIco"
+								onMouseEnter={handleEnter}
+								onMouseLeave={handleExit}
+								style={{ opacity: opa }}
+							></div>
+						</a>
+						<Cart />
+					</div>
 				</div>
 			</div>
 		</nav>

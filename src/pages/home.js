@@ -1,4 +1,5 @@
 import { BlackBox, WhiteBox, PlainBox } from '../components/boxes';
+
 export const Home = () => {
 	return (
 		<div className="home-div">
@@ -21,8 +22,13 @@ export const Home = () => {
 
 			<section id="featured-products">
 				<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-					<WhiteBox />
+					<WhiteBox
+						title="black hat"
+						subtitle="$3.99"
+						itemInfo={{ name: 'black hat', price: '3.99', amount: '1' }}
+					/>
 					<BlackBox />
+					<WhiteBox />
 				</div>
 				<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
 					<WhiteBox />

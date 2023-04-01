@@ -18,6 +18,23 @@ export const createAction = async ({ request }) => {
 	});
 	return redirect('/inv');
 };
+export const addToCart = async (item) => {
+	await fetch(url + '/inv', {
+		method: 'post',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(item),
+	});
+	return redirect('/inv');
+};
+export const updateCart = async () => {
+	const response = await fetch(url + '/inv');
+	const inventory = await response.json();
+	console.log(inventory);
+	window.localStorage.setItem('currentCart', JSON.stringify(inventory));
+	return inventory;
+};
 
 export const updateAction = async ({ request, params }) => {
 	console.log('update action >>>> ');
