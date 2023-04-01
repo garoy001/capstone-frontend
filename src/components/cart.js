@@ -17,6 +17,7 @@ export const Cart = () => {
 							name={item.name}
 							cost={item.price}
 							amount={item.amount}
+							id={item._id}
 						/>
 					</li>
 				);

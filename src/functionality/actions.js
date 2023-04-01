@@ -26,13 +26,16 @@ export const addToCart = async (item) => {
 		},
 		body: JSON.stringify(item),
 	});
-	return redirect('/inv');
+	window.location.reload(false);
+	return redirect('/');
 };
 export const updateCart = async () => {
 	const response = await fetch(url + '/inv');
 	const inventory = await response.json();
 	console.log(inventory);
 	window.localStorage.setItem('currentCart', JSON.stringify(inventory));
+	window.location.reload(false);
+
 	return inventory;
 };
 
@@ -40,31 +43,29 @@ export const updateAction = async ({ request, params }) => {
 	console.log('update action >>>> ');
 	const formData = await request.formData();
 	const id = params.id;
+
 	const updatedCart = {
-		name: formData.get('name'),
-		price: formData.get('price'),
-		amount: formData.get('amount'),
-		image: formData.get('image'),
+		name: formData.get('itemName'),
+		price: formData.get('itemPrice'),
 	};
-	const bodyObj = {
-		cart: updatedCart,
-		operation: params.op,
-	};
+
 	console.log('update action >>>> id= ' + id);
 	console.table(updatedCart);
-	await fetch(url + '/cart/' + id, {
+	await fetch(url + '/inv/' + id, {
 		method: 'put',
 		headers: {
 			'Content-Type': 'application/json',
 		},
-		body: JSON.stringify(bodyObj),
+		body: JSON.stringify(updatedCart),
 	});
-	return redirect('/inv');
+	// window.location.reload(false);
+	return redirect('/');
 };
 export const deleteAction = async ({ params }) => {
 	const id = params.id;
-	await fetch(url + '/cart/' + id, {
+	await fetch(url + '/inv/' + id, {
 		method: 'delete',
 	});
-	return redirect('/inv');
+	window.location.reload(false);
+	return redirect('/');
 };

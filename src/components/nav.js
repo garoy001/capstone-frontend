@@ -2,7 +2,14 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Cart } from './cart';
 import { useState, useContext } from 'react';
 import { CartContext } from '../App';
+import * as $AB from 'jquery';
 export const Nav = () => {
+	$AB('#myDD').on('hide.bs.dropdown', function (e) {
+		if (e.clickEvent) {
+			e.preventDefault();
+		}
+	});
+
 	const [opa, setOpa] = useState(1);
 	const handleEnter = (e) => {
 		setOpa(0.6);
@@ -53,7 +60,10 @@ export const Nav = () => {
 					</ul>
 				</div>
 				<div>
-					<div class="nav-item dropdown align-items-center justify-content-center">
+					<div
+						class="nav-item dropdown align-items-center justify-content-center"
+						id="myDD"
+					>
 						<a
 							class="nav-link dropdown-toggle cart-container py-0 "
 							href="#"

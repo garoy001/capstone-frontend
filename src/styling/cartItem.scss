@@ -1,0 +1,23 @@
+.cart-item-container {
+	display: flex;
+
+	justify-content: space-evenly;
+	align-items: center;
+	p {
+		margin-bottom: 0 !important;
+	}
+	.cart-item-name {
+		width: 50%;
+	}
+	.cart-item-cost {
+		width: 25%;
+	}
+	.btn {
+		font-size: 0.5rem;
+		float: right;
+	}
+
+	.btn-container {
+		width: 25%;
+	}
+}
