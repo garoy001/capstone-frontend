@@ -9,7 +9,12 @@
 		opacity: 0.8;
 	}
 }
-
+.updater {
+	input {
+		max-width: 30%;
+		margin-left: 2%;
+	}
+}
 @media (min-width: 1612px) {
 	.dropdown-menu {
 		width: 20rem;

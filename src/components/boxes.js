@@ -1,10 +1,10 @@
 import { addToCart, updateCart } from '../functionality/actions';
 const handleClick = (iteminfo) => {
+	console.log(iteminfo + ' <<<');
 	addToCart(iteminfo);
 	updateCart();
 };
 export const WhiteBox = (props) => {
-	console.log(props);
 	return (
 		<div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden boxHover">
 			<div class="my-3 py-3 boxText">

@@ -22,7 +22,7 @@ export const CartItem = (props) => {
 			count = 0;
 		}
 	};
-	console.log(props, ' p rops');
+
 	return (
 		<div className="cart-item-container">
 			<img

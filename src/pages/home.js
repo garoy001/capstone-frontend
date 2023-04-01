@@ -39,7 +39,7 @@ export const Home = () => {
 							img="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
 							itemInfo={{
 								name: 'apple',
-								price: '$1.99',
+								price: '1.99',
 								amount: '1',
 								image:
 									'https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
@@ -49,11 +49,11 @@ export const Home = () => {
 					<Fade>
 						<WhiteBox
 							title="black shoes"
-							subtitle="19.99"
+							subtitle="$19.99"
 							img="https://images.unsplash.com/photo-1582898967731-b5834427fd66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-							iteminfo={{
+							itemInfo={{
 								name: 'black shoes',
-								price: '1.99',
+								price: '19.99',
 								amount: '1',
 								image:
 									'https://images.unsplash.com/photo-1582898967731-b5834427fd66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
